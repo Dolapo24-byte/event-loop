@@ -9,12 +9,15 @@ async function fetchdata(){
 
         const result = document.getElementById("results");
 
-        result.innerHTML = data.map((item) => {
+    
+
+        result.innerHTML = data.map((item, index,) => {
+            let image = `./images/${index}.jpeg` 
         return `
             <div class="card"> 
                 <h3>name: ${item.name} </h3>
                 <p>price: ${item.price} </p>
-                <p>images: ${item.image}</p>
+                <img src=${image} alt= "${item.image}">
                 <p>Type: ${item.type}</p>
             </div>
         
